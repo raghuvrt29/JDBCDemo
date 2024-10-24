@@ -36,10 +36,14 @@ public class JDBCDemo {
 //            boolean status = st.execute(sql);
 //            System.out.println("Status: " + status);
 
-            //Executing Update Query
-            String sql = "update students set name='Srinivas Chodisetti' where id=5";
-            int num = st.executeUpdate(sql);
-            System.out.println("Rows effected: "+num);
+//            //Executing Update Query
+//            String sql = "update students set name='Srinivas Chodisetti' where id=5";
+//            int num = st.executeUpdate(sql);
+//            System.out.println("Rows effected: "+num);
+
+            //Executing Delete Query
+            String sql = "delete from students where id = 5";
+            st.execute(sql);
 
             conn.close();
             System.out.println("Connection Closed");
